@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Montserrat, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { MobileBlocker } from "@/components/mobile-blocker"
 import { LoadingScreen } from "@/components/loading-screen"
 import { PageTransition } from "@/components/page-transition"
 import "./globals.css"
@@ -26,7 +25,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}>
         <LoadingScreen />
-        <MobileBlocker />
         <PageTransition>{children}</PageTransition>
         <Analytics />
       </body>

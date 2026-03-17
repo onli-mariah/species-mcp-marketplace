@@ -9,16 +9,16 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-yellow-accent selection:text-foreground">
       {/* Navigation */}
-      <header className="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-background/80 backdrop-blur-sm border-b border-border">
-        <div style={{ fontFamily: 'var(--font-sans), sans-serif' }} className="text-xl tracking-tighter lowercase font-thin text-foreground">
+      <header className="fixed top-0 w-full z-50 p-4 md:p-6 flex justify-between items-center bg-background/80 backdrop-blur-sm border-b border-border">
+        <div style={{ fontFamily: 'var(--font-sans), sans-serif' }} className="text-lg md:text-xl tracking-tighter lowercase font-thin text-foreground">
           <Link href="/">species.market</Link>
         </div>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-2 md:gap-4">
           <a 
             href="https://onli.cloud" 
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-sans uppercase tracking-widest font-bold hover:text-muted-foreground transition-colors mr-2"
+            className="hidden md:block text-xs font-sans uppercase tracking-widest font-bold hover:text-muted-foreground transition-colors mr-2"
           >
             onli.cloud
           </a>
@@ -26,16 +26,17 @@ export default function Home() {
             href="https://onli.you" 
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-sans uppercase tracking-widest font-bold hover:text-muted-foreground transition-colors mr-2"
+            className="hidden md:block text-xs font-sans uppercase tracking-widest font-bold hover:text-muted-foreground transition-colors mr-2"
           >
             onli.you
           </a>
           <Link 
             href="/develop" 
-            className="flex items-center gap-2 px-6 py-2 rounded-full border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all text-xs font-sans lowercase tracking-wide font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
+            className="flex items-center justify-center gap-2 px-4 md:px-6 py-2 rounded-full border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all text-[10px] md:text-xs font-sans lowercase tracking-wide font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
           >
-            <Terminal className="w-4 h-4" />
-            <span>develop canvas</span>
+            <Terminal className="w-3.5 h-3.5 md:w-4 md:h-4" />
+            <span className="hidden sm:inline">develop canvas</span>
+            <span className="sm:hidden">canvas</span>
           </Link>
         </nav>
       </header>
@@ -137,7 +138,7 @@ export default function Home() {
               </p>
               <div className="w-full relative group">
                 <div className="absolute inset-0 bg-foreground translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
-                <form className="relative bg-background border-2 border-foreground p-2 flex">
+                <form className="relative bg-background border-2 border-foreground p-2 flex flex-col sm:flex-row gap-2 sm:gap-0">
                   <input 
                     type="email" 
                     placeholder="developer@example.com" 
@@ -146,7 +147,7 @@ export default function Home() {
                   />
                   <button 
                     type="submit" 
-                    className="bg-foreground text-background px-8 py-3 font-bold uppercase tracking-widest text-xs hover:bg-muted-foreground transition-colors cursor-pointer"
+                    className="bg-foreground w-full sm:w-auto text-background px-8 py-3 font-bold uppercase tracking-widest text-xs hover:bg-muted-foreground transition-colors cursor-pointer text-center"
                     onClick={(e) => e.preventDefault()}
                   >
                     Join Waitlist
@@ -195,15 +196,15 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
               <a 
                 href="https://apps.apple.com/us/app/onli-you/id6503365414" target="_blank" rel="noopener noreferrer"
-                className="px-8 py-4 border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all rounded-none text-sm font-light uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
+                className="w-full sm:w-auto text-center px-8 py-4 border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all rounded-none text-sm font-light uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
               >
                 iOS - Available Now
               </a>
               <div 
-                className="px-8 py-4 border-2 border-muted-foreground text-muted-foreground rounded-none text-sm font-light uppercase tracking-widest cursor-not-allowed opacity-60"
+                className="w-full sm:w-auto text-center px-8 py-4 border-2 border-muted-foreground text-muted-foreground rounded-none text-sm font-light uppercase tracking-widest cursor-not-allowed opacity-60"
               >
                 Android - Coming Soon
               </div>
