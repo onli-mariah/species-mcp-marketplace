@@ -48,8 +48,26 @@ export default function Home() {
       <main className="flex-1 flex flex-col pt-12 lg:pt-24 px-6 lg:px-12 max-w-[1600px] w-full mx-auto space-y-32 pb-32">
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-16 pt-32 border-t-2 border-border pb-16 items-start">
           
-          {/* Left Side: Features & Button */}
-          <div className="lg:col-span-4 lg:col-start-1 space-y-12">
+          {/* Right Side: Copy (Appears First on Mobile) */}
+          <div className="order-1 lg:order-2 lg:col-span-7 lg:col-start-6 space-y-8 text-base font-normal leading-[1.6] text-foreground">
+            <p className="text-4xl font-thin mb-12 leading-tight uppercase">
+              Specie is the native utility asset of the Onli Ecosystem, designed specifically for modern developers.
+            </p>
+            <p className="text-foreground/80">
+              Species™ provides a predictable, possession-based digital unit that AI agents can understand, request, move, and reason about without the complexity of blockchain.
+            </p>
+            <p className="text-foreground/80">
+              Onli Appliances are intentionally simple to build. There are four core API calls every developer needs to learn — <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">Issue</span>, <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">AskToMove</span>, <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">ChangeOwner</span>, and <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">AuthorizeBehavior</span> — giving you a complete asset lifecycle with minimal surface area and maximum control. 
+            </p>
+            <div className="pt-8 mt-8 border-t-2 border-border">
+              <p className="font-light text-xl uppercase">
+                Species is value designed to be used by agents. Onli is infrastructure designed to be learned in an afternoon.
+              </p>
+            </div>
+          </div>
+
+          {/* Left Side: Features & Button (Appears Second on Mobile) */}
+          <div className="order-2 lg:order-1 lg:col-span-4 lg:col-start-1 space-y-12">
             <div className="space-y-8">
               <div className="p-6 border-l-2 border-foreground bg-secondary/30">
                 <h4 className="font-light text-xl uppercase tracking-wider mb-2 text-foreground">SDK & Libraries</h4>
@@ -72,24 +90,6 @@ export default function Home() {
               >
                 View Workflow <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
-          </div>
-
-          {/* Right Side: Copy */}
-          <div className="lg:col-span-7 lg:col-start-6 space-y-8 text-base font-normal leading-[1.6] text-foreground">
-            <p className="text-4xl font-thin mb-12 leading-tight uppercase">
-              Specie is the native utility asset of the Onli Ecosystem, designed specifically for modern developers.
-            </p>
-            <p className="text-foreground/80">
-              Species™ provides a predictable, possession-based digital unit that AI agents can understand, request, move, and reason about without the complexity of blockchain.
-            </p>
-            <p className="text-foreground/80">
-              Onli Appliances are intentionally simple to build. There are four core API calls every developer needs to learn — <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">Issue</span>, <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">AskToMove</span>, <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">ChangeOwner</span>, and <span className="font-medium underline decoration-1 underline-offset-4 decoration-border">AuthorizeBehavior</span> — giving you a complete asset lifecycle with minimal surface area and maximum control. 
-            </p>
-            <div className="pt-8 mt-8 border-t-2 border-border">
-              <p className="font-light text-xl uppercase">
-                Species is value designed to be used by agents. Onli is infrastructure designed to be learned in an afternoon.
-              </p>
             </div>
           </div>
           
@@ -173,7 +173,8 @@ export default function Home() {
 
         {/* Section 4: Download OnliYou */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-32 border-t-2 border-border items-center">
-          <div className="lg:col-span-6 order-2 lg:order-1">
+          {/* Image (Appears First on Mobile) */}
+          <div className="order-1 lg:order-1 lg:col-span-6">
             <div className="aspect-square bg-secondary/30 border-2 border-border p-4 flex flex-col justify-center items-center text-center overflow-hidden">
                <img 
                  src="/onliyou-lifestyle.jpg" 
@@ -182,7 +183,9 @@ export default function Home() {
                />
             </div>
           </div>
-          <div className="lg:col-span-6 space-y-8 order-1 lg:order-2">
+
+          {/* Copy (Appears Second on Mobile) */}
+          <div className="order-2 lg:order-2 lg:col-span-6 space-y-8">
             <div className="text-sm font-sans uppercase tracking-widest font-bold text-muted-foreground">Get Started Today</div>
             <h2 className="text-4xl font-thin leading-tight tracking-tighter text-foreground uppercase">
               Download OnliYou
