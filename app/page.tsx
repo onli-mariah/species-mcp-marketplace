@@ -118,7 +118,21 @@ export default function Home() {
 
         {/* Section 3: Finance Without Friction */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-32 border-t-2 border-border">
-          <div className="lg:col-span-5 space-y-8">
+          {/* Right Side: Key Benefits (Appears First on Mobile) */}
+          <div className="order-1 lg:order-2 lg:col-span-7">
+            <div className="bg-secondary/30 p-12 lg:p-16 border-2 border-border h-full flex flex-col justify-center">
+              <h3 className="text-sm font-sans font-bold uppercase tracking-widest text-muted-foreground mb-8">Key Benefits</h3>
+              <ul className="space-y-6 font-light text-xl text-foreground">
+                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Zero transaction fees — ever</li>
+                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Natural language commands in any chat</li>
+                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Instant settlement with no intermediaries</li>
+                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> AI-powered intelligent asset management</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Left Side: Request An Invite & Waitlist (Appears Second on Mobile) */}
+          <div className="order-2 lg:order-1 lg:col-span-5 space-y-8">
             <div className="text-sm font-sans uppercase tracking-widest font-bold text-muted-foreground">Request An Invite</div>
             <h2 className="text-4xl font-thin leading-tight tracking-tighter text-foreground uppercase">
               Finance Without Friction
@@ -155,19 +169,6 @@ export default function Home() {
                 </form>
               </div>
             </div>
-
-          </div>
-          <div className="lg:col-span-7">
-            <div className="bg-secondary/30 p-12 lg:p-16 border-2 border-border h-full flex flex-col justify-center">
-              <h3 className="text-sm font-sans font-bold uppercase tracking-widest text-muted-foreground mb-8">Key Benefits</h3>
-              <ul className="space-y-6 font-light text-xl text-foreground">
-                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Zero transaction fees — ever</li>
-                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Natural language commands in any chat</li>
-                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> Instant settlement with no intermediaries</li>
-
-                <li className="flex gap-4 items-start"><ArrowRight className="w-5 h-5 shrink-0 mt-1 text-muted-foreground" /> AI-powered intelligent asset management</li>
-              </ul>
-            </div>
           </div>
         </section>
 
@@ -199,7 +200,14 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
+            <ul className="space-y-4 font-light text-base text-foreground pt-4 mb-4">
+                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Secure possession vault</li>
+                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Real-time asset verification</li>
+                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> AI-powered conversational management</li>
+                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Zero fees, complete privacy</li>
+            </ul>
+
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 border-t-2 border-border">
               <a 
                 href="https://apps.apple.com/us/app/onli-you/id6503365414" target="_blank" rel="noopener noreferrer"
                 className="w-full sm:w-auto text-center px-8 py-4 border-2 border-foreground bg-foreground text-background hover:bg-background hover:text-foreground transition-all rounded-none text-sm font-light uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
@@ -212,13 +220,6 @@ export default function Home() {
                 Android - Coming Soon
               </div>
             </div>
-
-            <ul className="space-y-4 font-light text-base text-foreground pt-12">
-                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Secure possession vault</li>
-                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Real-time asset verification</li>
-                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> AI-powered conversational management</li>
-                <li className="flex gap-4 items-center"><div className="w-1.5 h-1.5 bg-foreground rounded-none" /> Zero fees, complete privacy</li>
-            </ul>
           </div>
         </section>
 
